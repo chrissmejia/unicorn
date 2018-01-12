@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+header {
+    position: fixed;
+    z-index: 10000000;
+    color: #fff;
+    left: 0;
+    right: 0;
+    padding: 0 0.4rem;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+header ul li {
+    float: left;
+    padding: 0.5rem 0.4rem;
+}
+
+header #utilities {
+    float: right;
+}
+
+#desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../defaults/backgrounds/lake.jpeg");
+    background-size: cover;
+}
