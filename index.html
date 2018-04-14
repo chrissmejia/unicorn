@@ -2,21 +2,23 @@
 <html>
 
 <head>
-    <title>Unicorn Desktop</title>
+    <title>Guld OS</title>
     <link href="system/styles/core.css" rel="stylesheet">
     <link href="system/vendor/fontawesome/styles/fontawesome-all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- The video -->
+    <video autoplay loop muted id="background">
+        <source src="./system/defaults/backgrounds/videos/watertree.mp4" type="video/mp4">
+    </video>
     <header>
-        <ul id="master">
+        <ul id="master" class="list-unstyled">
             <li>
-                <i class="fas fa-user-circle"></i>
-
-
-            </li>
-            <li>
-                Unicorn Desktop
+                <img src="./system/core/navbar/logo.svg">
+                <span>OS</span>
             </li>
         </ul>
         <ul id="utilities">
@@ -44,7 +46,110 @@
         </ul>
     </header>
     <section id="desktop">
+        <div id="calculator" class="app active" style="left: 90px; top: 90px">
+            <div class="canvas">
+                <div class="title-bar">
+                    <div class="buttons">
+                        <div class="button">
+                            <img src="./system/apps/titlebar/close.svg">
+                        </div>
+                        <div class="button">
+                            <img src="./system/apps/titlebar/window-minimize.svg">
+                        </div>
+                    </div>
+                    <div class="title">Calculator</div>
+                </div>
+                <div class="content">
+                    <div class="result">537.2</div>
+                    <img src="./apps/calculator/concept.png">
+                </div>
+            </div>
+        </div>
+        <div id="wallet" class="app" style="left: 230px; top: 600px">
+            <div class="canvas">
+                <div class="title-bar">
+                    <div class="buttons">
+                        <div class="button">
+                            <img src="./system/apps/titlebar/close.svg">
+                        </div>
+                        <div class="button">
+                            <img src="./system/apps/titlebar/window-minimize.svg">
+                        </div>
+                    </div>
+                    <div class="title">Wallet</div>
+                </div>
+                <div class="featured">
+                    Send guld
+                </div>
+                <div class="background">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">Amount</span>
+                                <input type="text" class="form-control" placeholder="amount" aria-describedby="basic-addon1">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        guld
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">guld</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Etherium worth</a>
+                                        <a class="dropdown-item" href="#">BTC worth</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">User</span>
+                                <input type="text" class="form-control" placeholder="user" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-right">
+                                <button type="button" class="btn btn-success">Sign and send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <footer>
+        <ul id="menu" class="list-unstyled">
+            <li>
+                <img src="./system/core/navbar/ico.svg">
+            </li>
+        </ul>
+        <ul id="open-apps" class="list-unstyled list-inline right">
+            <li id="dock_browser" class="list-inline-item">
+                <img src="./apps/browser/icon.png">
+            </li>
+            <li id="dock_calculator" class="list-inline-item active">
+                <img src="./apps/calculator/icon.png">
+            </li>
+            <li id="dock_wallet" class="list-inline-item">
+                <img src="./apps/wallet/icon.png">
+            </li>
+            <li id="dock_chat" class="list-inline-item">
+                <img src="./apps/chat/icon.png">
+            </li>
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="system/vendor/interact/interact.min.js"></script>
+    <script src="system/core/js/main.js"></script>
 </body>
 
 </html>
